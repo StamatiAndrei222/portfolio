@@ -104,6 +104,16 @@ const experience: ExperienceItem[] = [
 
 const projects: ProjectItem[] = [
   {
+    title: "Library Management",
+    description:
+      "A school solution for digitalizing the library process, focused on organizing books, handling records, and improving day-to-day workflow.",
+    stack: ["Next.js", "TypeScript", "Database", "REST API"],
+    githubUrl: "https://github.com/StamatiAndrei222/library-management",
+    liveUrl: "https://library-management-theta-jade.vercel.app",
+    liveLabel: "Live Demo",
+    isPrivateRepo: true
+  },
+  {
     title: "Dayframe",
     description:
       "A modern productivity web app focused on planning, task organization, focus execution, and AI-assisted suggestions.",
@@ -126,16 +136,6 @@ const projects: ProjectItem[] = [
     stack: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/StamatiAndrei222/javascript-amazon-project",
     liveUrl: "https://javascript-amazon-project-eight.vercel.app"
-  },
-  {
-    title: "Library Management",
-    description:
-      "A library management project focused on organizing books, handling records, and practical data operations in a structured web workflow.",
-    stack: ["Next.js", "TypeScript", "Database", "REST API"],
-    githubUrl: "https://github.com/StamatiAndrei222/library-management",
-    liveUrl: "https://vercel.com/andreinustamati-3461s-projects",
-    liveLabel: "Vercel Project",
-    isPrivateRepo: true
   }
 ];
 
