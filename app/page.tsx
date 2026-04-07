@@ -412,17 +412,6 @@ export default function Home() {
                https://www.linkedin.com/in/stamati-andrei-2448663bb/
               </a>
             </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Vercel Deployments</p>
-              <a
-                className="mt-2 block text-ink hover:underline"
-                href="https://vercel.com/andreinustamati-3461s-projects"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://vercel.com/andreinustamati-3461s-projects
-              </a>
-            </div>
           </div>
         </div>
       </section>
