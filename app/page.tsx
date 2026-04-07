@@ -14,7 +14,10 @@ type ProjectItem = {
   title: string;
   description: string;
   stack: string[];
-  githubUrl: string;
+  githubUrl?: string;
+  liveUrl: string;
+  liveLabel?: string;
+  isPrivateRepo?: boolean;
 };
 
 const technicalSkills = [
@@ -105,22 +108,34 @@ const projects: ProjectItem[] = [
     description:
       "A modern productivity web app focused on planning, task organization, focus execution, and AI-assisted suggestions.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "localStorage", "OpenAI integration / mock fallback"],
-    githubUrl: "https://github.com/StamatiAndrei222/DayFrame"
-    
+    githubUrl: "https://github.com/StamatiAndrei222/DayFrame",
+    liveUrl: "https://day-frame-rose.vercel.app"
   },
   {
     title: "React E-commerce Project",
     description:
       "A frontend e-commerce app built with React and Vite, focused on reusable components, shopping flow, and clean portfolio-ready structure.",
     stack: ["React", "JavaScript/JSX", "Vite", "CSS"],
-    githubUrl: "https://github.com/StamatiAndrei222/react-project"
+    githubUrl: "https://github.com/StamatiAndrei222/react-project",
+    liveUrl: "https://react-project-cyan-one.vercel.app"
   },
   {
     title: "JavaScript Amazon Project",
     description:
       "A practice e-commerce project inspired by a marketplace structure, focused on DOM manipulation, shopping flow, and frontend logic.",
     stack: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/StamatiAndrei222/javascript-amazon-project"
+    githubUrl: "https://github.com/StamatiAndrei222/javascript-amazon-project",
+    liveUrl: "https://javascript-amazon-project-eight.vercel.app"
+  },
+  {
+    title: "Library Management",
+    description:
+      "A library management project focused on organizing books, handling records, and practical data operations in a structured web workflow.",
+    stack: ["Next.js", "TypeScript", "Database", "REST API"],
+    githubUrl: "https://github.com/StamatiAndrei222/library-management",
+    liveUrl: "https://vercel.com/andreinustamati-3461s-projects",
+    liveLabel: "Vercel Project",
+    isPrivateRepo: true
   }
 ];
 
@@ -307,9 +322,9 @@ export default function Home() {
         <SectionHeading
           eyebrow="Projects"
           title="Portfolio projects"
-          description="These cards use placeholder links for GitHub and live demos, ready to be replaced with your real URLs."
+          description="Each project includes a live link so recruiters can view your work in real time."
         />
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           {projects.map((project) => (
             <article key={project.title} className="panel flex flex-col p-6">
               <h3 className="text-lg font-semibold">{project.title}</h3>
@@ -324,13 +339,30 @@ export default function Home() {
               </div>
 
               <div className="mt-6 flex gap-2">
+                {project.isPrivateRepo ? (
+                  <span
+                    className="rounded-full border border-line bg-slate-100 px-4 py-2 text-sm font-medium text-muted"
+                    title="This repository is private"
+                  >
+                    Private Repo
+                  </span>
+                ) : (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-line px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-slate-50"
+                  >
+                    GitHub
+                  </a>
+                )}
                 <a
-                  href={project.githubUrl}
+                  href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full border border-line px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-slate-50"
                 >
-                  GitHub
+                  {project.liveLabel ?? "Live Demo"}
                 </a>
               </div>
             </article>
@@ -378,6 +410,17 @@ export default function Home() {
                 rel="noreferrer"
               >
                https://www.linkedin.com/in/stamati-andrei-2448663bb/
+              </a>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Vercel Deployments</p>
+              <a
+                className="mt-2 block text-ink hover:underline"
+                href="https://vercel.com/andreinustamati-3461s-projects"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://vercel.com/andreinustamati-3461s-projects
               </a>
             </div>
           </div>
