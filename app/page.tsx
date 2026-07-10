@@ -82,7 +82,7 @@ const experience: ExperienceItem[] = [
   {
     role: "Intern",
     company: "Moldcell",
-    period: "17 Oct 2025 - Present",
+    period: "17 Oct 2025 - 27 May 2026",
     featured: true,
     bullets: [
       "Gaining practical exposure to digital workflows, internal tools, and professional software practices.",
