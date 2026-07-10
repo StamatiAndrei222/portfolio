@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/section-heading";
+import profilePhoto from "../new_photo.jpeg";
 
 type ExperienceItem = {
   role: string;
@@ -21,19 +22,22 @@ type ProjectItem = {
 };
 
 const technicalSkills = [
-  "Next.js",
   "React",
+  "Next.js",
   "JavaScript",
   "TypeScript",
-  "Tailwind CSS",
-  "PostgreSQL",
-  "MySQL",
-  "Prisma",
-  "REST API",
+  "HTML",
+  "CSS",
+  "SQL",
+  "Databases",
+  "REST APIs",
+  "Object-oriented programming",
+  "Software engineering",
+  "Data analysis basics",
+  "QA basics",
   "Git",
-  "GitHub",
-  "Docker",
-  "Postman"
+  "Postman",
+  "Docker"
 ];
 
 const softSkills = [
@@ -49,9 +53,16 @@ const education = [
   {
     institution: "Technical University of Moldova",
     degree: "Bachelor Studies in Information Technology",
-    period: "01 Sep 2022 - 20 Mar 2026",
+    period: "01 Sep 2022 - 26 May 2026",
     details:
-      "Relevant areas: web application development, frontend and backend fundamentals, database design and management, software engineering principles, object-oriented programming, API development, relational databases, and practical development of full-stack applications."
+      "Core areas: web application development, frontend and backend fundamentals, database design and management, software engineering principles, object-oriented programming, API development, relational databases, and full-stack application development."
+  },
+  {
+    institution: "kood/Jõhvi",
+    degree: "Selection Sprint - Intensive Programming Bootcamp",
+    period: "01 Jun 2026 - 19 Jun 2026",
+    details:
+      "Three-week intensive bootcamp in Jõhvi, Estonia, focused on programming, algorithmic problem-solving, and peer-to-peer learning. Worked through individual and team coding challenges in an international, self-directed environment."
   },
   {
     institution: "ILTC",
@@ -63,41 +74,20 @@ const education = [
     institution: "Nicolae Balcescu Theoretical High School",
     degree: "High School Diploma",
     period: "01 Sep 2019 - 30 Jun 2022",
-    details: "Completed secondary education with a strong interest in technology and practical learning."
+    details: "Completed secondary education, building the analytical and organisational foundation for later technical studies."
   }
 ];
 
 const experience: ExperienceItem[] = [
   {
-    role: "Moldcell Academy Intern",
+    role: "Intern",
     company: "Moldcell",
     period: "17 Oct 2025 - Present",
     featured: true,
     bullets: [
-      "Participating in a structured internship focused on practical exposure to digital technologies and professional workflows.",
-      "Collaborating with mentors and professionals in a corporate environment.",
-      "Attending training courses in SQL, Data Analysis, and QA while strengthening technical fundamentals.",
-      "Developing teamwork, communication, and problem-solving skills through real-world tasks."
-    ]
-  },
-  {
-    role: "Event Assistant",
-    company: "Mticket Group",
-    period: "15 Sep 2022 - 28 Mar 2026",
-    bullets: [
-      "Assisted in coordinating event operations and guest flow in fast-paced environments.",
-      "Communicated clearly with attendees and provided reliable on-site support.",
-      "Worked effectively in teams and adapted quickly to changing situations."
-    ]
-  },
-  {
-    role: "Cashier",
-    company: "S.R.L. Bis-concert international",
-    period: "05 Jul 2024 - 19 Jan 2025",
-    bullets: [
-      "Processed customer payments accurately and responsibly with attention to detail.",
-      "Provided professional service and clear communication with customers.",
-      "Handled transactions efficiently under pressure in a dynamic environment."
+      "Gaining practical exposure to digital workflows, internal tools, and professional software practices.",
+      "Strengthening fundamentals in SQL, data analysis, QA, documentation, and collaborative technical work.",
+      "Working with mentors and colleagues to understand how technical decisions are applied in a real business environment."
     ]
   }
 ];
@@ -106,17 +96,17 @@ const projects: ProjectItem[] = [
   {
     title: "Library Management",
     description:
-      "A school solution for digitalizing the library process, focused on organizing books, handling records, and improving day-to-day workflow.",
+      "A school project for digitalizing the library process, focused on organizing books, handling records, and improving day-to-day workflow.",
     stack: ["Next.js", "TypeScript", "Database", "REST API"],
     githubUrl: "https://github.com/StamatiAndrei222/library-management",
-    liveUrl: "https://library-management-theta-jade.vercel.app",
+    liveUrl: "https://library-management-woad-nine.vercel.app",
     liveLabel: "Live Demo",
     isPrivateRepo: true
   },
   {
     title: "Dayframe",
     description:
-      "A modern productivity web app focused on planning, task organization, focus execution, and AI-assisted suggestions.",
+      "A productivity web app for planning and task organization, built to explore state management and clean UI patterns in Next.js.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "localStorage", "OpenAI integration / mock fallback"],
     githubUrl: "https://github.com/StamatiAndrei222/DayFrame",
     liveUrl: "https://day-frame-rose.vercel.app"
@@ -175,14 +165,13 @@ export default function Home() {
         <div className="panel overflow-hidden p-8 md:p-12">
           <div className="grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_340px] md:gap-12 lg:grid-cols-[minmax(0,1fr)_380px]">
             <div>
-              <p className="pill mb-6">Junior Web Developer</p>
+              <p className="pill mb-6">Junior Software Developer</p>
               <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-ink md:text-5xl md:leading-tight">
-                Building clean, practical web experiences with focus and consistency.
+                I build digital products with care, structure, and curiosity.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-                I am Andrei Stamati, an early-career developer building my path in IT through hands-on learning,
-                teamwork, and real projects. I am focused on web applications that are simple, useful, and
-                well-structured.
+                I&apos;m Andrei Stamati, a junior developer focused on building useful digital products and growing across
+                the full software lifecycle: frontend, backend, databases, APIs, QA, and clear technical collaboration.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-3">
@@ -199,7 +188,7 @@ export default function Home() {
                   Contact Me
                 </a>
                 <Link
-                  href="/Andrei-Stamati-CV.pdf"
+                  href="/Andrei_Stamati_CV.pdf"
                   download
                   className="rounded-full border border-line bg-white px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-slate-50"
                 >
@@ -211,11 +200,9 @@ export default function Home() {
             <div className="mx-auto w-full max-w-[200px] md:max-w-[220px]">
               <div className="panel overflow-hidden p-0">
                 <Image
-                  src="/IMG_7740.jpg"
+                  src={profilePhoto}
                   alt="Portrait of Andrei Stamati"
-                  width={900}
-                  height={1400}
-                  className="h-[270px] w-full object-cover object-[50%_20%] md:h-[300px]"
+                  className="h-[270px] w-full object-cover object-[50%_18%] md:h-[300px]"
                   priority
                 />
               </div>
@@ -225,12 +212,13 @@ export default function Home() {
       </section>
 
       <section className="section-wrap mt-20" id="about">
-        <SectionHeading eyebrow="About" title="A responsible and motivated junior developer" />
+        <SectionHeading eyebrow="About" title="Software, systems, and useful products" />
         <div className="panel p-7 md:p-9">
           <p className="max-w-4xl text-sm leading-relaxed text-muted md:text-base">
-            I am a motivated and responsible person with strong communication and teamwork skills, currently building my
-            career in Information Technology. I adapt quickly, enjoy learning, and work seriously toward my goals. I am
-            especially interested in web applications and practical digital products that solve real problems.
+            My background combines application development, relational databases, API design, object-oriented
+            programming, software engineering principles, QA fundamentals, and data-oriented thinking. I enjoy turning
+            requirements into working interfaces and structured systems, whether that means planning the data model,
+            building the user flow, testing behavior, or improving the final user experience.
           </p>
         </div>
       </section>
@@ -238,12 +226,12 @@ export default function Home() {
       <section className="section-wrap mt-20" id="skills">
         <SectionHeading
           eyebrow="Skills"
-          title="Technical foundation and professional soft skills"
-          description="Balanced growth in modern web development and collaborative work habits."
+          title="Technical foundation and collaborative work habits"
+          description="A broad IT base with practical project experience and steady professional habits."
         />
         <div className="grid gap-6 md:grid-cols-2">
           <div className="panel p-7 md:p-8">
-            <h3 className="text-lg font-semibold">Technical Skills</h3>
+            <h3 className="text-lg font-semibold">Technical Areas</h3>
             <div className="mt-5 flex flex-wrap gap-2">
               {technicalSkills.map((skill) => (
                 <span key={skill} className="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted">
@@ -261,17 +249,12 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <div className="mt-8 border-t border-line pt-6 text-sm text-muted">
-              <p>Languages</p>
-              <p className="mt-2">Romanian - Native</p>
-              <p>English - B2 (listening, reading, speaking), B1 writing</p>
-            </div>
           </div>
         </div>
       </section>
 
       <section className="section-wrap mt-20" id="education">
-        <SectionHeading eyebrow="Education" title="Academic and language training" />
+        <SectionHeading eyebrow="Education" title="Academic and technical training" />
         <div className="space-y-4">
           {education.map((item) => (
             <article key={item.institution} className="panel p-7 md:p-8">
@@ -291,8 +274,8 @@ export default function Home() {
       <section className="section-wrap mt-20" id="experience">
         <SectionHeading
           eyebrow="Experience"
-          title="Practical experience with strong transferable skills"
-          description="Moldcell Academy is the most relevant technical step, supported by client-facing and fast-paced team roles."
+          title="Practical industry exposure"
+          description="Developing professional habits through hands-on work, mentorship, and technical training."
         />
         <div className="space-y-4">
           {experience.map((item) => (
